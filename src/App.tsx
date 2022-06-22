@@ -1,22 +1,50 @@
-import { useEffect } from "react"
+import { gql, useQuery } from "@apollo/client"
 
+
+const GET_LESSONS_QUERY = gql`
+  query {
+    lessons {
+      id
+      title
+    }
+  }
+`
+interface Lesson {
+  id: string;
+  title: string;
+}
 
 function App() {
-  // tentando consumir a API, porém essas ferramentas não são feitas para utilizar o GraphQL
-  // para isso utilizarei o Apollo
-  // ex.: para listar lessons
-  // useEffect(() => {
-  // fetch('https://api-sa-east-1.graphcms.com/v2/cl4ow0max1aot01z402b3fh4x/master', {
-  //  method: 'POST',
-  //  body: `query {
-  //        }`
-  //      })
-  // }, [])
+  /* 
+   Tentando consumir a API, porém essas ferramentas não são feitas para utilizar o GraphQL
+   para isso utilizarei o Apollo
+   ex.: para listar lessons
+   useEffect(() => {
+   fetch('https://api-sa-east-1.graphcms.com/v2/cl4ow0max1aot01z402b3fh4x/master', {
+    method: 'POST',
+    body: `query {
+          }`
+        })
+   }, [])  
+_____________________________
 
+useEffect(() => {
+  client.query({
+    query: GET_LESSONS_QUERY,
+  }).then(response => {
+    console.log(response.data)
+  })
+}, [])
+*/
 
-  return (
-    
-    <h1 className="text-5xl font-bold text-blue-500" >Hello World</h1>
+const { data } = useQuery<{ lessons: Lesson[]}>(GET_LESSONS_QUERY)  
+
+return (
+    <ul>
+      {data?.lessons.map(lesson => {
+        return <li key={lesson.id}>{lesson.title}</li>
+      })}
+    </ul>
   )
 }
 
