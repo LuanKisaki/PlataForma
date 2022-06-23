@@ -18,7 +18,7 @@ module.exports = {
                     444: "#83818c",
                     333: "#ffffff"
                 },
-                bluue: {
+                myblue: {
                     999: '#1c232e',
                     888: '#1e293b',
                     777: '#1d2d47',
