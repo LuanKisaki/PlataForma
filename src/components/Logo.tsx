@@ -72,7 +72,7 @@ export function Logo() {
         fontWeight="normal"
       ></path>
       <g
-        aria-Label="K"
+        aria-label="K"
         style={{ lineHeight: "1.25" }}
         fill="none"
         stroke="#00a8ff"
@@ -121,7 +121,7 @@ export function Logo() {
         strokeMiterlimit="4"
         strokeOpacity="1"
         strokeWidth="0.851"
-        aria-Label="Kisaki"
+        aria-label="Kisaki"
         fontFamily="OCR A Extended"
         fontSize="38.732"
         fontStretch="normal"
@@ -149,7 +149,7 @@ export function Logo() {
         strokeMiterlimit="4"
         strokeOpacity="1"
         strokeWidth="0.745"
-        aria-Label="Kisaki"
+        aria-label="Kisaki"
         filter="url(#filter1352)"
         fontFamily="OCR A Extended"
         fontSize="38.732"
@@ -178,7 +178,7 @@ export function Logo() {
         strokeMiterlimit="4"
         strokeOpacity="1"
         strokeWidth="1"
-        aria-Label="Luan"
+        aria-label="Luan"
         fontFamily="OCR A Extended"
         fontSize="36.945"
         fontStretch="normal"
