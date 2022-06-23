@@ -1,11 +1,11 @@
-import { DiscordLogo, Lightning } from "phosphor-react";
+import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 
 export function Video() {
     return (
       <div className="flex-1" >
           <div className="bg-gray-888 flex justify-center">
             <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video bg-gray-999">
-
+              Video
             </div>
           </div>
 
@@ -17,10 +17,14 @@ export function Video() {
                   Nesse video inicia-se criação de PlataForma
                 </p>
                 <div className="flex items-center gap-4 mt-6">
-                  <img src="" alt="" />
+                  <img src="https://github.com/LKisaki.png" alt="Luan Kisaki"
+                    className="h-16 w-16 rounded-full border-2 border-blue-777"
+                  />
+                  <div>
+                    <span className="font-bold text-2xl block">Luan Kisaki</span>
+                    <span className="text-gray-200 text-sm block">Front end Dev</span>
+                  </div>
                 </div>
-
-
               </div>
 
               <div className="flex flex-col w-1/3 gap-4">
@@ -32,11 +36,38 @@ export function Video() {
                   <Lightning size={24} />
                   Desafio
                 </a>
-
               </div>
             </div> 
             
-            <div>
+            <div className="gap-8 mt-20 grid grid-cols-2">
+              <a href="" className="bg-myblue-888 rounded overflow-hidden flex items-stretch gap-6 hover:bg-myblue-666 transition-colors">
+                <div className="bg-blue-888 h-full p-6 flex items-center">
+                  <FileArrowDown size={40} />
+                </div>
+                <div className="py-6 leading-relaxed">
+                  <span className="font-bold text-2xl">
+                    Material Complementar
+                  </span>
+                  <p>Acesse o material complementar para mais conteúdo</p>
+                </div>
+                <div className="h-full p-6 flex items-center">
+                  <CaretRight size={24} />
+                </div>
+              </a>
+
+              <a href="" className="bg-myblue-888 rounded overflow-hidden flex items-stretch gap-6 hover:bg-myblue-666 transition-colors">
+                <div className="bg-blue-888 h-full p-6 flex items-center">
+                  <FileArrowDown size={40} />
+                </div>
+                <div className="py-6 leading-relaxed">
+                  <span className="font-bold text-2xl">Material Complementar</span>
+                  <p>Acesse o material complementar para mais conteúdo</p>
+                </div>
+                <div className="h-full p-6 flex items-center">
+                  <CaretRight size={24} />
+                </div>
+              </a>
+              
 
             </div>
           </div>
