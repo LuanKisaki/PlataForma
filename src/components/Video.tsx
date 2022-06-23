@@ -6,8 +6,8 @@ import '@vime/core/themes/default.css';
 export function Video() {
     return (
       <div className="flex-1" >
-          <div className="bg-gray-888 flex justify-center">
-            <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video bg-gray-999">
+          <div className="bg-gray-999 flex justify-center">
+            <div className="h-full  w-3/4 max-w-[1100px] max-h-[60vh] aspect-video bg-gray-999">
               <Player>
                 <Youtube videoId="1fueZCTYkpA" />
                 <DefaultUi />
