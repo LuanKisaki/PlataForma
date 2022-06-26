@@ -28,22 +28,28 @@ const { slug } = useParams<{ slug: string}>()
                 { availableDateFormatted }
             </span>
 
-            `${isActiveLesson ? 'bg-blue-777' : ''}`
-
             <div
               className={
                 classNames(
-                  `rounded border border-blue-999 mt-2 p-4 group-hover:border-blue-500 transition-colors`,
+                  'rounded border border-blue-999 mt-2 p-4 group-hover:border-blue-500 transition-colors',
                   {
                     'bg-blue-500': isActiveLesson,
                   }
-                )}>
+                  )}
+              >
                 <header className="flex items-center justify-between">
                   
                   {
                   isLessonAvailable ? (
   
-                    <span className="text-sm text-blue-666 font-medium flex items-center gap-2">
+                    <span className={
+                      classNames (
+                        'text-sm text-blue-666 font-medium flex items-center gap-2',
+                        {
+                          'text-white': isActiveLesson
+                        })
+                      }
+                    >
                     <CheckCircle size={20}/>
                       Liberado
                     </span>
@@ -59,11 +65,17 @@ const { slug } = useParams<{ slug: string}>()
                     </span>
                 </header>
                 
-                <span className="font-bold text-gray-300 mt-5 block">
+                <span className= {
+                    classNames(
+                      'font-bold text-gray-444 mt-5 block',
+                      {
+                      'text-white': isActiveLesson
+                    })
+                  }
+                  >
                     { props.title }
                 </span>
             </div> 
         </Link >
     )
-
 }
