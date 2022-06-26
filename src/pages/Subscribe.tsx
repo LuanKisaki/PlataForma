@@ -1,15 +1,37 @@
+import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 
+const CREATE_SUBSCRIBER_MUTATION = gql`
+  mutation CreateSubscriber ($name: String!, $email: String!) {
+    createSubscriber(data: {name: $name, email: $email}) {
+      id
+    }
+  }
+`
+
 export function Subscribe() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  function handleSubscribe(event: FormEvent) {
+  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+
+  async function handleSubscribe(event: FormEvent) {
     event.preventDefault();
 
-    console.log()
+    console.log(name, email)
 
+    await createSubscriber({
+      variables: {
+        name,
+        email,
+      }
+    })
+
+    navigate('/event')
   }
 
   return (
@@ -45,9 +67,10 @@ export function Subscribe() {
             />
             <button
               type="submit"
-              className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors"
+              disabled={loading}
+              className="mt-4 bg-blue-777 uppercase py-4 rounded font-bold text-sm hover:bg-blue-888 hover:text-gray-400 transition-colors disabled:opacity-50"
             >
-              Acessar
+              Cadastrar
             </button>
 
           </form>
