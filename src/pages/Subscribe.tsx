@@ -48,12 +48,14 @@ export function Subscribe() {
           <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
             <input
               type="text"
+              required
               className="bg-gray-900 rounded px-5 h-14"
               placeholder="Seu nome completo"
               onChange={event => setName(event.target.value)}
             />
             <input 
-              type="text"
+              type="email"
+              required
               className="bg-gray-900 rounded px-5 h-14"
               placeholder="Seu e-mail"
               onChange={event => setEmail(event.target.value)}
