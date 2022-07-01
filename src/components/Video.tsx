@@ -60,11 +60,11 @@ export function Video(props: VideoProps) {
             </div>
 
               <div className="flex flex-col w-1/3 gap-4">
-                <a href="" className="p-4 text-sm bg-blue-777 flex items-center rounded font-bold uppercase gap-2 justify-center  hover:bg-blue-999 hover:text-gray-400 transition-colors">
+                <a href="" className="video-button bg-blue-777  hover:bg-blue-999 hover:border-blue-999 hover:text-gray-400">
                   <DiscordLogo size={24} />
                   Forum
                 </a>
-                <a href="" className="p-4 text-sm text-blue-777 border border-blue-777 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-777 hover:text-myblue-999 transition-colors">
+                <a href="" className="video-button text-blue-777 hover:bg-blue-777 hover:text-white">
                   <Lightning size={24} />
                   Desafio
                 </a>

@@ -31,20 +31,21 @@ const { slug } = useParams<{ slug: string}>()
             <div
               className={
                 classNames(
-                  'rounded border border-blue-999 mt-2 p-4 group-hover:border-blue-500 transition-colors',
+                  'sidebar-lesson-div',
                   {
                     'bg-blue-500': isActiveLesson,
+                    
                   }
                   )}
               >
-                <header className="flex items-center justify-between">
+                <header className="sidebar-lesson-status">
                   
                   {
                   isLessonAvailable ? (
   
                     <span className={
                       classNames (
-                        'text-sm text-blue-666 font-medium flex items-center gap-2',
+                        'sidebar-lesson-status text-blue-666 ',
                         {
                           'text-white': isActiveLesson
                         })
@@ -54,13 +55,13 @@ const { slug } = useParams<{ slug: string}>()
                       Liberado
                     </span>
                   ) : (
-                    <span className="text-sm text-orange-999 font-medium flex items-center gap-2">
+                    <span className="sidebar-lesson-status text-orange-999">
                     <Lock size={20} />
                       Em breve
                     </span>
                   )}
                 
-                    <span className="text-xs rounded px-2 py-[0.125rem] text-gray-300  border border-green-300 font-bold ">
+                    <span className="sidebar-lesson-mode">
                         { props.type === 'live' ? 'AO VIVO' : 'VIDEO' }
                     </span>
                 </header>
@@ -71,8 +72,7 @@ const { slug } = useParams<{ slug: string}>()
                       {
                       'text-white': isActiveLesson
                     })
-                  }
-                  >
+                  }>
                     { props.title }
                 </span>
             </div> 

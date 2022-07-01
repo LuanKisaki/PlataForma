@@ -7,7 +7,8 @@ module.exports = {
         extend: {
             backgroundImage: {
                 blur: 'url(/src/assets/bg_blur.png)',
-                react: 'url(/src/assets/ReactJS icon.svg)',
+                react: 'url(/src/assets/ReactJS_icon.svg)',
+                // bReact: 'url(/src/assets/ReactJS_icon.svg), url(/src/assets/bg_blur.png)',
                 image: 'url(/src/assets/home_image_01.png)'
             },
             fontFamily: {
