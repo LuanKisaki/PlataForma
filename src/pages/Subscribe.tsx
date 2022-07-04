@@ -77,7 +77,7 @@ export function Subscribe() {
         </div>
 
         <div className=" w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-          <img src="/src/assets/home_image_01.png" className="mt-10" alt=""/>
+          <img src="https://user-images.githubusercontent.com/95627229/177052966-e712c15b-7d91-4afd-8742-c581df4b7a72.png" className="mt-10" alt=""/>
         </div>
 
       </div>
