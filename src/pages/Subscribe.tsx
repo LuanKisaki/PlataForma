@@ -30,9 +30,9 @@ export function Subscribe() {
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
       <div className="bg-react bg-top bg-no-repeat">
-        <div className="container w-full max-w-6xl grid gap-4 justify-between mt-20 mx-auto sm:grid-cols-2">
+        <div className="container w-full max-w-6xl px-4 grid gap-4 justify-between mt-20 mx-auto sm:grid-cols-2">
           <div className="max-w-2xl pb-4 text-center sm:text-left">
-            <div className="m-auto">
+            <div className="m-auto flex items-center justify-center sm:justify-start">
               <Logo />
             </div>
 
