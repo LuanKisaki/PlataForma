@@ -38,15 +38,15 @@ export function Subscribe() {
             </div>
 
             <h1 className="mt-8 text-[2.5rem] leading-tight">
-              Construa uma aplicação <span className="font-bold text-blue-300">Completa</span>, do zero, com <span className="font-bold text-blue-300">React</span>
+              Construa uma <span className="font-bold text-blue-300">Maratona</span> Completa com o <span className="font-bold text-blue-300">PlataForma</span>
             </h1>
             <p className="mt-4 text-gray-200 leading-relaxed">
-              Domine na prática uma das tecnologias mais utilizadas. 
+              Suas aulas online, seus materiais de apoio, suporte, biografia e professores em um só lugar.  
             </p>
 
           </div>
 
-          <div className="max-w-lg sm:justify-self-end">
+          <div className="max-w-lg sm:justify-self-end hover:saturate-200">
             <div className="p-9 max-w-xs mx-auto border border-blue-999 rounded">
               <span className="font-bold"> Inscreva-se</span>
 
@@ -68,7 +68,7 @@ export function Subscribe() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="mt-4 bg-blue-777 uppercase py-4 rounded font-bold text-sm hover:bg-blue-888 hover:text-gray-400 transition-colors disabled:opacity-50"
+                  className="mt-4 bg-blue-777 uppercase py-4 rounded font-bold text-sm hover:bg-blue-888 hover:text-gray-200 transition-colors disabled:opacity-50"
                   >
                   Cadastrar
                 </button>
