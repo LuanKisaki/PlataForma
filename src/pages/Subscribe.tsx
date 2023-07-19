@@ -1,7 +1,6 @@
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
-import { ReactSimbol } from "../components/ReactSimbol";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 import usePreview from "../assets/home_image_01.png";
 
@@ -25,13 +24,13 @@ export function Subscribe() {
       }
     })
 
-    navigate('/event')
+    navigate('/event/lesson/criando-plataforma')
   }
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
       <div className="bg-react bg-top bg-no-repeat">
-        <div className="container w-full max-w-6xl px-4 grid gap-4 justify-between mt-20 mx-auto sm:grid-cols-2">
+        <div className="w-full max-w-6xl px-4 grid gap-4 justify-between mt-20 mx-auto sm:grid-cols-2">
           <div className="max-w-2xl pb-4 text-center sm:text-left">
             <div className="m-auto flex items-center justify-center sm:justify-start">
               <Logo />
@@ -77,8 +76,8 @@ export function Subscribe() {
           </div>
         </div>
 
-        <div className=" w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-          <img src={ usePreview } className="mt-10" alt=""/>
+        <div className=" w-full flex items-center justify-between mt-20 mx-auto">
+          <img src={ usePreview } className="" alt=""/>
         </div>
 
       </div>

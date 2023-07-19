@@ -34,15 +34,14 @@ const { slug } = useParams<{ slug: string}>()
                   'sidebar-lesson-div',
                   {
                     'bg-blue-500': isActiveLesson,
+
                     
                   }
                   )}
               >
                 <header className="sidebar-lesson-status">
-                  
                   {
                   isLessonAvailable ? (
-  
                     <span className={
                       classNames (
                         'sidebar-lesson-status text-blue-666 ',
@@ -60,19 +59,20 @@ const { slug } = useParams<{ slug: string}>()
                       Em breve
                     </span>
                   )}
-                
                     <span className="sidebar-lesson-mode">
                         { props.type === 'live' ? 'AO VIVO' : 'VIDEO' }
                     </span>
                 </header>
                 
+                
                 <span className= {
-                    classNames(
-                      'font-bold text-gray-444 mt-5 block',
+                    classNames (
+                      'font-bold block mt-5',
                       {
-                      'text-white': isActiveLesson
+                      'text-gray-444 ': !isActiveLesson
                     })
-                  }>
+                  }
+                >
                     { props.title }
                 </span>
             </div> 

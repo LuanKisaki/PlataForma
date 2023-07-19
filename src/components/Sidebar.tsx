@@ -13,10 +13,10 @@ export function Sidebar() {
                     return (
                         <Lesson
                             key={lesson.id}
-                            title= {lesson.title}
-                            slug= {lesson.slug}
+                            title={lesson.title}
+                            slug={lesson.slug}
                             availableAt={new Date(lesson.availableAt)}
-                            type= {lesson.lessonType}                 
+                            type={lesson.lessonType}
                         />
                     )
                 })}
