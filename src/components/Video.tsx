@@ -1,5 +1,5 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
-import { CaretRight, CodesandboxLogo, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import { CaretRight, CodesandboxLogo, DiscordLogo, FileArrowDown, Lightning, LinkedinLogo, WhatsappLogo } from "phosphor-react";
 
 import '@vime/core/themes/default.css';
 import { useGetLessonBySlugQuery } from "../graphql/generated";
@@ -36,7 +36,7 @@ export function Video(props: VideoProps) {
         </div>
       </div>
       <div className="lg:p-8 max-w-[1100px] mx-auto">
-        <div className="flex flex-col lg:flex-row items-start gap-16">
+        <div className="flex flex-col lg:flex-row items-start gap-10">
           <div className="flex-1 p-4 ">
             <h1 className="text-2xl font-bold">
               {data.lesson.title}
@@ -45,9 +45,9 @@ export function Video(props: VideoProps) {
               {data.lesson.description}
             </p>
             {data.lesson.teacher && (
-              <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 mt-6">
+              <div className="flex flex-row items-start lg:items-center gap-4 mt-6">
                 <img
-                  className="h-16 w-16 rounded-full border-2 border-blue-777"
+                  className="h-16 w-16 rounded-full border-2 border-blue-666"
                   src={data.lesson.teacher.avatarURL}
                   alt={data.lesson.teacher.name}
                 />
@@ -63,13 +63,21 @@ export function Video(props: VideoProps) {
             )}
           </div>
           <div className="flex flex-col self-center lg:self-start p-4 w-full lg:w-1/3 gap-4">
-            <a href="" className="video-button bg-blue-777 hover:bg-blue-999 hover:border-blue-999 hover:text-gray-400">
-              <DiscordLogo size={24} />
-              Forum
+            <a
+              className="video-button bg-blue-777 hover:saturate-200"
+              href="https://wa.me/message/VWLMKUPXHCLMP1"
+              target="_blank"
+              >
+              <WhatsappLogo size={24} />
+              Contato
             </a>
-            <a href="" className="video-button text-blue-777 hover:bg-blue-777 hover:text-white">
-              <Lightning size={24} />
-              Desafio
+            <a 
+              className="video-button text-blue-777 hover:bg-blue-777 hover:text-white"
+              href="https://linkedin.com/in/LuanKisaki"
+              target="_blank"
+              >
+              <LinkedinLogo size={24} />
+              me visite
             </a>
           </div>
         </div>
